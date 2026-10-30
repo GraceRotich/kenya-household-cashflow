@@ -1,0 +1,26 @@
+# Python virtual environment
+.venv/
+
+# Python temporary files
+__pycache__/
+*.pyc
+
+# Jupyter temporary files
+.ipynb_checkpoints/
+
+# Raw and processed datasets
+data/raw/
+data/processed/
+data/rejected/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Application logs
+*.log
+
+# Operating system files
+.DS_Store
+Thumbs.db
