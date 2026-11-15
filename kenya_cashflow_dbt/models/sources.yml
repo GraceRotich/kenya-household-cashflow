@@ -1,0 +1,13 @@
+# These tables were created by our Python load.py script.
+version: 2
+
+sources:
+  - name: financial_diaries
+    schema: diary_data
+    description: "Processed Kenya Financial Diaries household summaries loaded into PostgreSQL."
+    tables:
+      - name: household_daily
+      - name: household_weekly
+      - name: household_monthly
+      - name: spending_monthly
+      - name: financial_monthly

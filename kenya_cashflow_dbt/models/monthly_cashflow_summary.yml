@@ -1,0 +1,13 @@
+
+version: 2
+
+models:
+  - name: monthly_cashflow_summary
+    description: "Monthly household cash-flow summary for reporting."
+
+    columns:
+      - name: month_start
+        description: "First day of each calendar month."
+        data_tests:
+          - unique
+          - not_null

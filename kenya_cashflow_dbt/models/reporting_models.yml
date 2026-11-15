@@ -1,0 +1,52 @@
+# dbt tests run automatically with `dbt test` or `dbt build`.
+version: 2
+
+models:
+  - name: monthly_spending_by_category
+    description: "Expenditure by calendar month, category and payment method."
+    columns:
+      - name: month_start
+        data_tests:
+          - not_null
+      - name: category
+        data_tests:
+          - not_null
+      - name: payment_group
+        data_tests:
+          - not_null
+
+  - name: monthly_financial_activity
+    description: "Recorded financial-device operations by month and type."
+    columns:
+      - name: month_start
+        data_tests:
+          - not_null
+      - name: financial_activity
+        data_tests:
+          - not_null
+
+  - name: weekly_cashflow_summary
+    description: "Recorded monetary flows grouped into calendar weeks."
+    columns:
+      - name: week_start
+        data_tests:
+          - not_null
+          - unique
+
+  - name: household_trends
+    description: "Monthly monetary activity for individual household charts."
+    columns:
+      - name: hh_ids
+        data_tests:
+          - not_null
+      - name: month_start
+        data_tests:
+          - not_null
+
+  - name: household_overview
+    description: "One row per household across its recorded months."
+    columns:
+      - name: hh_ids
+        data_tests:
+          - not_null
+          - unique

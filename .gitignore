@@ -1,26 +1,52 @@
-# Python virtual environment
+# Python environments and caches
 .venv/
-
-# Python temporary files
+venv/
+airflow-venv/
 __pycache__/
-*.pyc
-
-# Jupyter temporary files
+*.py[cod]
 .ipynb_checkpoints/
+.pytest_cache/
 
-# Raw and processed datasets
+# Source and generated data (publish only with explicit permission)
 data/raw/
 data/processed/
-data/rejected/
+*.zip
 
-# Environment variables and secrets
+# Database credentials and private settings
 .env
 .env.*
 !.env.example
+pg.env
+**/pg.env
+profiles.yml
+.pgpass
+*.pem
+*.key
 
-# Application logs
+# Local databases and Airflow/Metabase state
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+metabase.jar
+metabase.db*
+airflow.cfg
+webserver_config.py
+standalone_admin_password.txt
+simple_auth_manager_passwords.json.generated
+
+# Build and run artifacts
+logs/
 *.log
-
-# Operating system files
+kenya_cashflow_dbt/target/
+kenya_cashflow_dbt/logs/
+kenya_cashflow_dbt/dbt_packages/
+dbt_packages/
+target/
 .DS_Store
-Thumbs.db
+
+# Local VS Code settings
+.vscode/
+
+# Jupyter notebook output
+.ipynb_checkpoints/
